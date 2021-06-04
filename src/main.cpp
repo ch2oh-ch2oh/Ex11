@@ -6,10 +6,10 @@
 
 int main() {
     Train train(2);
-    Cage*cage=train.getFirst();
+    Cage *cage = train.getFirst();
     for (int i = 0; i < 50; ++i) {
-        std::cout<<(cage->get()?"o":"_");
-        cage=cage->next;
+        std::cout << (cage->get() ? "o" : "_");
+        cage = cage->next;
     }
     return 0;
 }

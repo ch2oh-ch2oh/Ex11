@@ -36,7 +36,7 @@ public:
 
     int solve();
 
-    Cage* getFirst();
+    Cage *getFirst();
 };
 
 #endif //EX11_TRAIN_H
