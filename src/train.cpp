@@ -10,7 +10,7 @@ void Train::add(Cage *cage) {
 
 Train::Train(int amount) {
     if (amount < 2) throw "wtf";
-    int seed=1488;
+    int seed = 1488;
     Cage *cage = new Cage(rand_r(&seed) % 2, first, last);
     first = cage;
     last = cage;
