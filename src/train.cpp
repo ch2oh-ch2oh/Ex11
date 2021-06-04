@@ -10,12 +10,12 @@ void Train::add(Cage *cage) {
 
 Train::Train(int amount) {
     if (amount < 2) throw "wtf";
-    rand.seed(1489);
-    Cage *cage = new Cage(rand() % 2, first, last);
+    int seed=1488;
+    Cage *cage = new Cage(rand_r(&seed) % 2, first, last);
     first = cage;
     last = cage;
     for (int i = 1; i < amount; ++i) {
-        add(new Cage(rand() % 2, first, last));
+        add(new Cage(rand_r(&seed) % 2, first, last));
     }
     last->next = first;
     first->prev = last;
